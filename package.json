@@ -1,0 +1,24 @@
+{
+  "name": "prisma-heroku",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "dev": "NODE_PATH=backend/node_modules PORT=3000 node backend/src/index.js",
+    "start": "NODE_PATH=backend/node_modules node backend/src/index.js",
+    "heroku-postbuild": "cd front && npm install && npm run build"
+  },
+  "dependencies": {
+    "@prisma/client": "2.5.1",
+    "body-parser": "1.19.0",
+    "cors": "^2.8.5",
+    "express": "4.17.1",
+    "path": "^0.12.7",
+    "unique-names-generator": "^4.3.1"
+  },
+  "devDependencies": {
+    "@prisma/cli": "2.5.1"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  }
+}
